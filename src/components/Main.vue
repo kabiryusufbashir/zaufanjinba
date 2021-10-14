@@ -1,5 +1,5 @@
 <template>
-    <main class="my-4 relative top-48 text-gray-600">
+    <main class="my-4 relative top-48 text-gray-600 z-30">
             <section id="banner" class="w-full">
                 <img class="mx-auto w-5/6 rounded-3xl" src="../assets/banner.jpg" alt="banner image">
             </section>
