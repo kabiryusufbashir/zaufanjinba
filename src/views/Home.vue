@@ -21,9 +21,3 @@ export default {
     }
 }
 </script>
-
-<style>
-    header, #body{
-        background-color: blanchedalmond;
-    }
-</style>

@@ -8,7 +8,7 @@
                 The Zaufanjinba Foundation is a non-profit and non-political organization, established in 2015. Zaufanjinba foundation has touched the lives of many people within and outside Borno state through community services and youth empowerment. With the destruction of livelihoods brought about by the insurgency, resulting in communities displaced, the foundation currently maintains three IDP camps with a total population of about 200 persons catering for all their needs, which include food, shelter, healthcare, and education for the children
             </p>
         </section>
-        <section id="founder" class="py-6 bg-white shadow-lg">
+        <section id="founder" class="py-6 bg-white" style="background-color:#eee;">
             <Heading heading="Foundation Founder" />
             <div class="mb-4 w-2/3 mx-auto md:grid grid-cols-2 gap-8">
                 <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="2500" class="py-4 my-auto md:mx-0.5">
@@ -37,7 +37,7 @@
                 </p>
             </div>
         </section>
-        <section id="empowerment" class="bg-white">
+        <section id="empowerment" class="bg-white" style="background-color:#eee;">
             <div class="w-5/6 mx-auto py-8">
                 <Heading heading="Youth Empowerment" />
                 <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500" class="md:grid grid-cols-2 gap-3">
