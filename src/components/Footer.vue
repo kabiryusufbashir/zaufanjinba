@@ -5,7 +5,7 @@
                 <button class="w-1/2 bg-green-600 py-3 text-white rounded-full text-xl">Donate</button>
             </div>
         </div>
-        <div class="w-5/6 mx-auto pb-12 md:grid grid-cols-2 gap-5">
+        <div class="w-5/6 mx-auto pb-2 md:grid grid-cols-3 gap-5">
             <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500">
                 <div>
                     <i class="fas fa-phone text-2xl"></i>
@@ -21,6 +21,26 @@
                 <div>
                     No 13 New GRA Along Bama Road, Maiduguri, Borno State Nigeria
                 </div>
+            </div>
+            <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="2500">
+                <div>
+                    <i class="fas fa-envelope text-2xl"></i>
+                </div>
+                <div>
+                    info@zaufanjinbafoundation.org <br>
+                    Communications@zaufanjinbafoundation.org
+                </div>
+            </div>
+        </div>
+        <div class="w-5/6 mx-auto flex justify-evenly py-5">
+            <div>
+                <i class="fab fa-facebook text-3xl"></i>
+            </div>
+            <div>
+                <i class="fab fa-twitter text-3xl"></i>
+            </div>
+            <div>
+                <i class="fab fa-linkedin text-3xl"></i>
             </div>
         </div>
         <div class="text-sm text-center text-white bg-green-600 py-5">
