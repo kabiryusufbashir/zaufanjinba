@@ -10,7 +10,9 @@
                 <input v-model="name" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="name" placeholder="Name" id="name">    
                 <input v-model="phone" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="phone" placeholder="Phone" id="phone">    
                 <input v-model="amount" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="amount" placeholder="Amount" id="phone"> 
-                <button class="bg-green-600 text-white py-2 w-1/2 mx-auto rounded-xl">Donate {{ amount }}</button>   
+                <button class="bg-green-600 text-white py-2 w-1/2 mx-auto rounded-xl" @click="asyncPay">
+                    Donate {{ amount }}
+                </button>
             </div>
         </div> 
     </div>    
@@ -20,14 +22,50 @@
 export default {
     name: 'Modal',
     data(){
-        return{
+        return {
             name:'',
             phone:'',
             amount:'',
-            displayModal: true
+            displayModal: true,
+            paymentData: {
+                tx_ref: this.generateReference(),
+                amount: 10,
+                currency: 'NGN',
+                payment_options: 'card,ussd',
+                redirect_url: '',
+                meta: {
+                'counsumer_id': '7898',
+                'consumer_mac': 'kjs9s8ss7dd'
+                },
+                customer: {
+                name: 'Demo Customer  Name',
+                email: 'customer@mail.com',
+                phone_number: '081845***044'
+                } ,
+                customizations: {
+                title: 'Customization Title',
+                description: 'Customization Description',
+                logo: 'https://flutterwave.com/images/logo-colored.svg'
+                },
+                onclose: this.closedPaymentModal
+            }
         }
     },
-    methods:{
+    methods: {
+        asyncPay() {
+            this.asyncPayWithFlutterwave(this.paymentData).then(
+                    (response) => {
+                        console.log(response)
+                    }
+            )
+        },
+        closedPaymentModal() {
+            console.log('payment is closed');
+        },
+        generateReference(){
+            let date = new Date()
+            return date.getTime().toString();
+        },
         closeModal(){
             if(this.displayModal == true){
                 this.displayModal = false
