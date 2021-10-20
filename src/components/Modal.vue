@@ -1,8 +1,8 @@
 <template>
-    <div id="modal">
+    <div v-show="displayModal" id="modal">
         <div class="modal-content">
             <div class="modal-header text-xl text-center font-medium">
-                <span class="close">&times;</span>
+                <span @click="closeModal" class="close">&times;</span>
                 Donation <br> 
                 <i class="fas fa-donate text-3xl text-green-600"></i>
             </div>
@@ -10,7 +10,7 @@
                 <input v-model="name" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="name" placeholder="Name" id="name">    
                 <input v-model="phone" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="phone" placeholder="Phone" id="phone">    
                 <input v-model="amount" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="amount" placeholder="Amount" id="phone"> 
-                <button class="bg-green-600 text-white py-2 w-1/2 mx-auto rounded-xl">Donate</button>   
+                <button class="bg-green-600 text-white py-2 w-1/2 mx-auto rounded-xl">Donate {{ amount }}</button>   
             </div>
         </div> 
     </div>    
@@ -18,14 +18,31 @@
 
 <script>
 export default {
-    name: 'Modal'
+    name: 'Modal',
+    data(){
+        return{
+            name:'',
+            phone:'',
+            amount:'',
+            displayModal: true
+        }
+    },
+    methods:{
+        closeModal(){
+            if(this.displayModal == true){
+                this.displayModal = false
+            }else{
+                this.displayModal = true
+            }
+        }
+    }
 }
 </script>
 
 
 <style scoped>
     #modal{
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.8);
         position: fixed;
         z-index: 60;
         left: 0;
