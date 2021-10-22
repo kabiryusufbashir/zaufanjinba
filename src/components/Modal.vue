@@ -7,11 +7,12 @@
                 <i class="fas fa-donate text-3xl text-green-600"></i>
             </div>
             <div class="modal-body flex flex-col">
-                <input v-model="name" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="name" placeholder="Name" id="name">    
-                <input v-model="phone" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="phone" placeholder="Phone" id="phone">    
-                <input v-model="amount" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="amount" placeholder="Amount" id="phone"> 
+                <input v-model="paymentData.customer.name" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="name" placeholder="Name" id="name">    
+                <input v-model="paymentData.customer.phone_number" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="phone_number" placeholder="Phone" id="phone_number">    
+                <input v-model="paymentData.customer.email" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="email" placeholder="Email Address" id="email">    
+                <input v-model="paymentData.amount" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="amount" placeholder="Amount" id="amount"> 
                 <button class="bg-green-600 text-white py-2 w-1/2 mx-auto rounded-xl" @click="asyncPay">
-                    Donate {{ amount }}
+                    Donate ₦{{paymentData.amount}}
                 </button>
             </div>
         </div> 
@@ -23,29 +24,22 @@ export default {
     name: 'Modal',
     data(){
         return {
-            name:'',
-            phone:'',
-            amount:'',
             displayModal: true,
             paymentData: {
                 tx_ref: this.generateReference(),
-                amount: 10,
+                amount: '',
                 currency: 'NGN',
                 payment_options: 'card,ussd',
-                redirect_url: '',
-                meta: {
-                'counsumer_id': '7898',
-                'consumer_mac': 'kjs9s8ss7dd'
-                },
+                redirect_url: '/',
                 customer: {
-                name: 'Demo Customer  Name',
-                email: 'customer@mail.com',
-                phone_number: '081845***044'
-                } ,
+                name: '',
+                email: '',
+                phone_number: ''
+                },
                 customizations: {
-                title: 'Customization Title',
-                description: 'Customization Description',
-                logo: 'https://flutterwave.com/images/logo-colored.svg'
+                    title: 'Zaufanjinba Foundation',
+                    description: 'Support the foundation with your donation!',
+                    logo: 'https://www.zaufanjinba.org/images/foundation.jpg'
                 },
                 onclose: this.closedPaymentModal
             }
@@ -53,11 +47,27 @@ export default {
     },
     methods: {
         asyncPay() {
-            this.asyncPayWithFlutterwave(this.paymentData).then(
-                    (response) => {
-                        console.log(response)
+            if(this.name !== ''){
+                if(this.phone_number !== ''){
+                    if(this.email !== ''){
+                        if(this.amount !== ''){
+                            this.asyncPayWithFlutterwave(this.paymentData).then(
+                                (response) => {
+                                    console.log(response)
+                                }
+                            )
+                        }else{
+                            alert('Amount field empty')
+                        }
+                    }else{
+                        alert('Email Address field empty')
                     }
-            )
+                }else{
+                    alert('Phone No field empty')
+                }
+            }else{
+                alert('Name field empty')
+            }
         },
         closedPaymentModal() {
             console.log('payment is closed');
@@ -74,6 +84,7 @@ export default {
             }
         }
     }
+    
 }
 </script>
 

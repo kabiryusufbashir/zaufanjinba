@@ -70,7 +70,6 @@ export default {
             }else{
                 this.showModal = false
             }
-            // console.log('Clicked')
         }
     }
 }

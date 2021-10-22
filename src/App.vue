@@ -7,7 +7,7 @@ import AOS from 'aos'
 
 export default {
   name:'App',
-  created ( ) {
+  created () {
     AOS.init()
   }
 }
