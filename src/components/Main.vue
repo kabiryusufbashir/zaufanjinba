@@ -62,6 +62,61 @@
                 </div>
             </div>
         </section>
+        <section id="board-of-trustee" class="bg-white" style="background-color:#eee;">
+            <div class="w-5/6 mx-auto py-8">
+                <Heading heading="Board of Trustees" />
+                <div class="md:grid grid-cols-3 gap-4">
+                    <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500" class="">
+                        <div class="py-4">
+                            <img class="rounded-full w-1/2 mx-auto" src="../assets/founder.png" alt="Hon. Adamu Alhaji Lawan">
+                            <p class="text-center font-extrabold">
+                                Hon. Adamu Alhaji Lawan <br> Founder and President
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="2500" class="">
+                        <div class="py-4">
+                            <img class="rounded-full w-1/2 mx-auto" src="../assets/muhd-lawan.png" alt="Muhd Lawan">
+                            <p class="text-center font-extrabold">
+                                Mohammed Lawan Sherrif <br> Trustee
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500" class="">
+                        <div class="py-4">
+                            <img class="rounded-full w-1/2 mx-auto" src="../assets/trustee.png" alt="Mai Abuna Maijir">
+                            <p class="text-center font-extrabold">
+                                Mai Abuna Maijir <br> Trustee
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="2500" class="">
+                        <div class="py-4">
+                            <img class="rounded-full w-1/2 mx-auto" src="../assets/engr-muhd.png" alt="Engr. Muhammad Lawan Zannah">
+                            <p class="text-center font-extrabold">
+                                Engr. Muhammad Lawan Zannah <br> Trustee
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500" class="">
+                        <div class="py-4">
+                            <img class="rounded-full w-1/2 mx-auto" src="../assets/trustee.png" alt="Barrister Babagana Ali">
+                            <p class="text-center font-extrabold">
+                                Barrister Babagana Ali <br> Trustee
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500" class="">
+                        <div class="py-4">
+                            <img class="rounded-2xl w-1/2 mx-auto" src="../assets/trustee.png" alt="Hon. Adamu Alhaji Lawan">
+                            <p class="text-center font-extrabold">
+                                Bakura Bukar <br> Trustee
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 

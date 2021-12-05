@@ -7,12 +7,12 @@
                 <i class="fas fa-donate text-3xl text-green-600"></i>
             </div>
             <div class="modal-body flex flex-col">
-                <input v-model="paymentData.customer.name" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="name" placeholder="Name" id="name">    
-                <input v-model="paymentData.customer.phone_number" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="phone_number" placeholder="Phone" id="phone_number">    
-                <input v-model="paymentData.customer.email" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="email" placeholder="Email Address" id="email">    
-                <input v-model="paymentData.amount" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="amount" placeholder="Amount" id="amount"> 
-                <button class="bg-green-600 text-white py-2 w-1/2 mx-auto rounded-xl" @click="asyncPay">
-                    Donate ₦{{paymentData.amount}}
+                <input v-model="name" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="name" placeholder="Name" id="name">    
+                <input v-model="phone_number" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="phone_number" placeholder="Phone" id="phone_number">    
+                <input v-model="email" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="email" placeholder="Email Address" id="email">    
+                <input v-model="amount" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="amount" placeholder="Amount" id="amount"> 
+                <button class="bg-green-600 text-white py-2 w-1/2 mx-auto rounded-xl" @click="payWithPaystack()">
+                    Donate ₦{{amount}}
                 </button>
             </div>
         </div> 
@@ -25,57 +25,13 @@ export default {
     data(){
         return {
             displayModal: true,
-            paymentData: {
-                tx_ref: this.generateReference(),
-                amount: '',
-                currency: 'NGN',
-                payment_options: 'card,ussd',
-                redirect_url: '/',
-                customer: {
-                name: '',
-                email: '',
-                phone_number: ''
-                },
-                customizations: {
-                    title: 'Zaufanjinba Foundation',
-                    description: 'Support the foundation with your donation!',
-                    logo: 'https://www.zaufanjinba.org/images/foundation.jpg'
-                },
-                onclose: this.closedPaymentModal
-            }
+            name: '',
+            email: '',
+            phone_number: '',
+            amount: ''
         }
     },
     methods: {
-        asyncPay() {
-            if(this.name !== ''){
-                if(this.phone_number !== ''){
-                    if(this.email !== ''){
-                        if(this.amount !== ''){
-                            this.asyncPayWithFlutterwave(this.paymentData).then(
-                                (response) => {
-                                    console.log(response)
-                                }
-                            )
-                        }else{
-                            alert('Amount field empty')
-                        }
-                    }else{
-                        alert('Email Address field empty')
-                    }
-                }else{
-                    alert('Phone No field empty')
-                }
-            }else{
-                alert('Name field empty')
-            }
-        },
-        closedPaymentModal() {
-            console.log('payment is closed');
-        },
-        generateReference(){
-            let date = new Date()
-            return date.getTime().toString();
-        },
         closeModal(){
             if(this.displayModal == true){
                 this.displayModal = false

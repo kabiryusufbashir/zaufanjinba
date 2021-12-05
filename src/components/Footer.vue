@@ -65,11 +65,7 @@ export default {
     },
     methods:{
         donationClickM(){
-            if(this.showModal == false){
-                this.showModal = true
-            }else{
-                this.showModal = false
-            }
+            this.showModal = !this.showModal
         }
     }
 }
