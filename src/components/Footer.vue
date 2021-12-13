@@ -1,11 +1,11 @@
 <template>
-    <div class="z-40 relative top-28 text-gray-600 flex flex-col md:w-full">
-        <div class="mt-12 w-2/3 md:mb-12 md:w-1/4 mx-auto">
+    <div class="z-40 relative top-28 text-gray-600 flex flex-col md:w-full bg-green-600">
+        <!-- <div class="mt-12 w-2/3 md:mb-12 md:w-1/4 mx-auto">
             <div class="flex justify-center" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500">
                 <button @click="donationClickM" class="w-1/2 bg-green-600 py-3 text-white rounded-full text-xl">Donate</button>
             </div>
-        </div>
-        <div class="w-5/6 mx-auto pb-2 md:grid grid-cols-3 gap-5">
+        </div> -->
+        <div class="mt-12 w-5/6 mx-auto py-2 md:grid grid-cols-3 gap-5 text-white py-8">
             <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500">
                 <div>
                     <i class="fas fa-phone text-2xl"></i>
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-5/6 mx-auto flex justify-evenly py-5">
+        <div class="w-5/6 mx-auto text-center py-5 text-white py-8" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="2500">
             <div>
                 <i class="fab fa-facebook text-3xl"></i>
             </div>
@@ -43,7 +43,7 @@
                 <i class="fab fa-linkedin text-3xl"></i>
             </div>
         </div>
-        <div class="text-sm text-center text-white bg-green-600 py-5">
+        <div class="text-sm text-center text-dark bg-white py-8">
             Copyright &copy; 2021 Zaufanjinba Foundation |
             Designed by <a href="https://teampiccolo.com">Team Piccolo</a>
         </div>
