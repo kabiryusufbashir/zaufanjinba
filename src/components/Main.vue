@@ -135,7 +135,7 @@
                         <div class="py-4">
                             <img class="rounded-full w-1/2 mx-auto" src="../assets/muhd-lawan.png" alt="Muhd Lawan">
                             <p class="text-center font-extrabold">
-                                Mohammed Lawan Sherrif <br> Trustee
+                                Mohammed Lawan Sheriff <br> Trustee
                             </p>
                         </div>
                     </div>
@@ -167,7 +167,7 @@
                         <div class="py-4">
                             <img class="rounded-2xl w-1/2 mx-auto" src="../assets/trustee.png" alt="Hon. Adamu Alhaji Lawan">
                             <p class="text-center font-extrabold">
-                                Bakura Bukar <br> Trustee
+                                Babakura Bukar <br> Trustee
                             </p>
                         </div>
                     </div>
