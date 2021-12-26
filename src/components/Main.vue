@@ -18,7 +18,7 @@
             </p>
         </section>
         <section id="founder" class="py-8 bg-white" style="background-color:#eee;">
-            <Heading heading="Foundation Founder" />
+            <Heading heading="Founder" />
             <div class="mb-4 w-2/3 mx-auto md:grid grid-cols-2 gap-8">
                 <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="2500" class="py-4 my-auto md:mx-0.5">
                     <img class="rounded-2xl md:w-full mx-auto" src="../assets/founder_003.jpg" alt="Hon Zaufanjinba">
@@ -141,7 +141,7 @@
                     </div>
                     <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500" class="">
                         <div class="py-4">
-                            <img class="rounded-full w-1/2 mx-auto" src="../assets/babakura-bukar.png" alt="Mai Abuna Maijir">
+                            <img class="rounded-full w-1/2 mx-auto" src="../assets/mai-abuna.png" alt="Mai Abuna Maijir">
                             <p class="text-center font-extrabold">
                                 Mai Abuna Maijir <br> Trustee
                             </p>
@@ -165,7 +165,7 @@
                     </div>
                     <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500" class="">
                         <div class="py-4">
-                            <img class="rounded-full w-1/2 mx-auto" src="../assets/mai-abuna.png" alt="Mai Abuna">
+                            <img class="rounded-full w-1/2 mx-auto" src="../assets/babakura-bukar.png" alt="babakura">
                             <p class="text-center font-extrabold">
                                 Babakura Bukar <br> Trustee
                             </p>
