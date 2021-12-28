@@ -125,7 +125,7 @@
                 <div class="md:grid grid-cols-3 gap-4">
                     <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500" class="">
                         <div class="py-4">
-                            <img class="rounded-full w-1/2 mx-auto" src="../assets/founder.png" alt="Hon. Adamu Alhaji Lawan">
+                            <img class="rounded-full w-1/2 mx-auto" src="../assets/founder_003.png" alt="Hon. Adamu Alhaji Lawan">
                             <p class="text-center font-extrabold">
                                 Hon. Adamu Alhaji Lawan <br> Founder and President
                             </p>

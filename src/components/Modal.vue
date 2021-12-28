@@ -11,7 +11,7 @@
                 <input v-model="phone_number" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="phone_number" placeholder="Phone" id="phone_number">    
                 <input v-model="email" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="email" placeholder="Email Address" id="email">    
                 <input v-model="amount" class="border border-gray-600 my-2 p-2 rounded-lg" type="text" name="amount" placeholder="Amount" id="amount"> 
-                <button class="bg-green-600 text-white py-2 w-1/2 mx-auto rounded-xl" @click="payWithPaystack()">
+                <button class="bg-green-600 text-white py-2 w-1/2 mx-auto rounded-xl" @click="pay">
                     Donate ₦{{amount}}
                 </button>
             </div>
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import {payWithPaystack} from '../../public/app'
 export default {
     name: 'Modal',
     data(){
@@ -38,6 +39,9 @@ export default {
             }else{
                 this.displayModal = true
             }
+        },
+        pay(){
+            payWithPaystack(this.name,this.email,this.phone_number,this.amount)
         }
     }
     
